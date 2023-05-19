@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring boot index page example</title>
+
+    <style>
+    div{
+       text-align: center;
+        width: 300px;
+        height: 500px;
+        background-color: cornflowerblue;
+        margin: auto;
+        padding: 10px;
+        display: table;
+    }
+    input{
+     text-align: center;
+
+        margin: auto;
+        padding: 10px;
+
+    }
+
+body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f7f7f7;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: cornflowerblue;
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    form label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    form select,
+    form input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        font-size: 16px;
+    }
+
+    form button[type="submit"] {
+  width: 80px;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  color: cornflowerblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+form button[type="submit"]:hover {
+  background-color: cornflowerblue;
+  color: #fff;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+<div class="container-fluid">
+
+    <h1>RESULTS</h1>
+
+
+    <p>Toplam Süre(ms): <span th:text="${result.totalTime}"></span></p>
+    <p>Toplam Ram Kullanımı(byte): <span th:text="${result.totalRamUsage}"></span></p>
+    <p>İşlemci Kullanım Süresi(ms): <span th:text="${result.totalCpuUsage}"></span></p>
+
+
+    <br/>
+
+    <form action="/" method="get">
+
+        <button type="submit">Geri</button>
+
+    </form>
+
+
+
+
+</div>
+
+</body>
+</html>
